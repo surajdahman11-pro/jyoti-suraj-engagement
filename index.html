@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jyoti &amp; Suraj — Engagement Invitation</title>
+<meta name="theme-color" content="#f8f1e7">
+<style>
+:root{--paper:#fffaf2;--ink:#4c3029;--wine:#853e46;--gold:#b88a4a;--muted:#8b7165}
+*{box-sizing:border-box}body{margin:0;background:#f1e6d7;color:var(--ink);font-family:Georgia,'Times New Roman',serif;display:grid;place-items:center;min-height:100vh;padding:24px}
+.invite{position:relative;overflow:hidden;width:min(760px,100%);padding:clamp(30px,7vw,68px) clamp(24px,8vw,76px);text-align:center;background:var(--paper);border:1px solid #d7b77f;box-shadow:0 20px 70px #5c38251c}
+.invite:before,.invite:after{content:"❧";position:absolute;color:var(--gold);font-size:58px;line-height:1}.invite:before{top:10px;left:16px;transform:rotate(-35deg)}.invite:after{right:16px;bottom:10px;transform:rotate(145deg)}
+.eyebrow{letter-spacing:.28em;text-transform:uppercase;font:11px Arial,sans-serif;color:var(--wine)}.ornament{color:var(--gold);font-size:24px;margin:20px 0}
+h1{font-size:clamp(42px,9vw,76px);font-weight:normal;line-height:1.04;margin:22px 0 8px;color:var(--wine)}.amp{font-style:italic;color:var(--gold);font-size:.7em}
+.intro{font-size:18px;line-height:1.8;margin:22px auto;max-width:470px}.names{font-size:20px;line-height:1.8;margin:18px 0}.label{font:10px Arial,sans-serif;text-transform:uppercase;letter-spacing:.2em;color:var(--muted)}.details{margin:28px auto;padding:22px 10px;border-top:1px solid #d9c5a5;border-bottom:1px solid #d9c5a5;max-width:440px}.date{font-size:26px;color:var(--wine);margin:8px 0}.time,.venue{font-size:17px;line-height:1.7}.family{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:24px auto;max-width:520px}.family p{margin:8px 0;font-size:16px;line-height:1.55}.footer{font-size:17px;font-style:italic;color:var(--wine);margin-top:26px}.edit-note{font:11px Arial,sans-serif;color:#9a8777;margin-top:30px}
+@media(max-width:480px){body{padding:12px}.family{grid-template-columns:1fr;gap:8px}.invite:before,.invite:after{font-size:42px}}
+</style>
+</head>
+<body>
+<main class="invite">
+  <div class="eyebrow">With the blessings of our families</div>
+  <div class="ornament">✦ &nbsp; ❦ &nbsp; ✦</div>
+  <div class="intro">Together with our families, we invite you to celebrate the engagement of</div>
+  <h1><span data-edit="bride">Jyoti</span><br><span class="amp">&amp;</span><br><span data-edit="groom">Suraj</span></h1>
+  <div class="ornament">— ❦ —</div>
+  <div class="label">On Sunday</div>
+  <div class="date" data-edit="date">18 October 2026</div>
+  <div class="time" data-edit="time">12:00 PM onwards</div>
+  <section class="details">
+    <div class="label">Venue</div>
+    <div class="venue" data-edit="venue">Akhyana<br>Sector 52, Gurugram</div>
+  </section>
+  <div class="label">With love and blessings from</div>
+  <section class="family">
+    <div>
+      <div class="label">Grandparents</div>
+      <p data-edit="grandparents">Smt. Basanti Devi<br>&amp; Sh. Jageram Jangra</p>
+    </div>
+    <div>
+      <div class="label">Parents of Jyoti</div>
+      <p data-edit="bride-parents">Smt. Indu Jangra<br>&amp; Sh. Bijender Jangra</p>
+    </div>
+  </section>
+  <div class="footer">Your presence will make our day even more special.</div>
+  <div class="edit-note">To change family names or event details, edit the text in index.html marked with data-edit.</div>
+</main>
+</body>
+</html>
