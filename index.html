@@ -69,28 +69,15 @@ const eventDate = new Date('2026-10-18T12:00:00+05:30').getTime();
 function tick(){let diff=Math.max(0,eventDate-Date.now());document.getElementById('days').textContent=Math.floor(diff/86400000).toString().padStart(2,'0');document.getElementById('hours').textContent=Math.floor(diff%86400000/3600000).toString().padStart(2,'0');document.getElementById('minutes').textContent=Math.floor(diff%3600000/60000).toString().padStart(2,'0');document.getElementById('seconds').textContent=Math.floor(diff%60000/1000).toString().padStart(2,'0')}
 tick();setInterval(tick,1000);
 
-// A soft, original bell-like instrumental motif. Audio begins after the guest taps the seal.
-let audioContext=null, musicTimer=null, musicOn=false, nextNoteTime=0, noteIndex=0;
-const melody=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46,523.25,587.33,659.25,523.25,493.88,587.33,659.25,587.33];
-function playNote(freq,when,duration){
-  const osc=audioContext.createOscillator(), gain=audioContext.createGain();
-  osc.type='sine';osc.frequency.setValueAtTime(freq,when);
-  gain.gain.setValueAtTime(0.0001,when);gain.gain.exponentialRampToValueAtTime(0.055,when+0.04);gain.gain.exponentialRampToValueAtTime(0.0001,when+duration);
-  osc.connect(gain);gain.connect(audioContext.destination);osc.start(when);osc.stop(when+duration+0.03);
-  const harmony=audioContext.createOscillator(), hg=audioContext.createGain();
-  harmony.type='triangle';harmony.frequency.setValueAtTime(freq/2,when);
-  hg.gain.setValueAtTime(0.0001,when);hg.gain.exponentialRampToValueAtTime(0.012,when+0.06);hg.gain.exponentialRampToValueAtTime(0.0001,when+duration*1.5);
-  harmony.connect(hg);hg.connect(audioContext.destination);harmony.start(when);harmony.stop(when+duration*1.5+0.03);
-}
+// Bridal Piano MP3. The file should be committed at /bridal-piano.mp3.
+const bridalPiano = new Audio('/bridal-piano.mp3');
+bridalPiano.loop = true;
+bridalPiano.preload = 'auto';
+let musicOn = false;
 function startMusic(){
-  if(!audioContext)audioContext=new(window.AudioContext||window.webkitAudioContext)();
-  audioContext.resume();musicOn=true;
-  if(musicTimer)clearInterval(musicTimer);
-  nextNoteTime=audioContext.currentTime+0.08;
-  const schedule=()=>{while(nextNoteTime<audioContext.currentTime+0.7){const f=melody[noteIndex%melody.length];playNote(f,nextNoteTime,0.75);if(noteIndex%4===0)playNote(melody[(noteIndex+4)%melody.length]/2,nextNoteTime+0.12,1.05);noteIndex++;nextNoteTime+=0.58;}};
-  schedule();musicTimer=setInterval(schedule,180);updateMusicButton();
+  bridalPiano.play().then(()=>{musicOn=true;updateMusicButton();}).catch(()=>{musicOn=false;updateMusicButton();});
 }
-function stopMusic(){musicOn=false;if(musicTimer)clearInterval(musicTimer);musicTimer=null;if(audioContext)audioContext.suspend();updateMusicButton();}
+function stopMusic(){bridalPiano.pause();musicOn=false;updateMusicButton();}
 function updateMusicButton(){const b=document.getElementById('musicToggle');b.textContent=musicOn?'♫ Music: On':'♫ Music: Off';b.setAttribute('aria-pressed',String(musicOn));}
 document.getElementById('openInvitation').addEventListener('click',()=>{
   document.getElementById('openingScreen').classList.add('is-open');
