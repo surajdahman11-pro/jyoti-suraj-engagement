@@ -54,6 +54,10 @@ body.invitation-closed{overflow:hidden}
 .music-toggle[hidden]{display:none}
 @media(max-width:620px){.envelope-scene{height:78vh;min-height:430px;transform:translateY(1vh)}.envelope{width:100%;height:190px}.envelope-card{height:280px}.music-toggle{right:12px;bottom:12px}}
 @media(prefers-reduced-motion:reduce){.envelope-flap,.envelope-card,.seal-button{transition-duration:.01ms}}
+
+/* Keep each invitation page aligned to the first screen's viewport height */
+.section,.closing{min-height:100svh}
+@media(max-width:620px){.hero{min-height:100svh}.section,.closing{min-height:100svh}}
 </style>
 </head>
 <body class="invitation-closed">
