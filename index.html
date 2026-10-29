@@ -178,6 +178,47 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}.site-shell
 @media(max-width:430px){.story-scene{height:205px;margin:7px auto 10px}.varmala-scene{height:215px}.dancing-groom{scale:.92}.wedding-couple{scale:.92}}
 @media(prefers-reduced-motion:reduce){.dancing-groom,.groom-arm,.groom-leg,.dhol,.confetti,.scene-flower,.string-lights:before,.string-lights:after,.bride-figure,.groom-figure,.bride-arm,.wedding-groom-arm,.varmala,.garland-flowers,.rose-arch span,.mandap-glow,.floating-rose{animation:none!important}}
 
+
+/* High-detail illustrated wedding scenes */
+.story-scene.premium-scene{height:225px;width:min(100%,360px);margin:9px auto 13px;border:1px solid #e0bd7c;border-radius:170px 170px 7px 7px;background:#39233c;box-shadow:0 12px 30px #4a20301f,inset 0 0 0 4px #f6dfb74a;overflow:hidden}
+.story-scene.premium-scene:before{display:none}
+.scene-svg{width:100%;height:100%;display:block}
+.scene-caption{position:absolute;z-index:9;bottom:6px;left:0;right:0;color:#ffedc9;font-family:'Italianno',cursive;font-size:23px;text-shadow:0 2px 7px #261426;pointer-events:none}
+.dancer{transform-origin:180px 190px;animation:dancerGroove .58s ease-in-out infinite alternate}
+@keyframes dancerGroove{from{transform:translateY(1px) rotate(-2deg)}to{transform:translateY(-5px) rotate(2deg)}}
+.raised-arm{transform-origin:204px 103px;animation:raisedArmGroove .58s ease-in-out infinite alternate}
+@keyframes raisedArmGroove{from{transform:rotate(-7deg)}to{transform:rotate(8deg)}}
+.leg-a{transform-origin:164px 153px;animation:legGrooveA .58s ease-in-out infinite alternate}
+.leg-b{transform-origin:193px 153px;animation:legGrooveB .58s ease-in-out infinite alternate}
+@keyframes legGrooveA{from{transform:rotate(9deg)}to{transform:rotate(-10deg)}}
+@keyframes legGrooveB{from{transform:rotate(-10deg)}to{transform:rotate(12deg)}}
+.dhol-player{transform-origin:50% 100%;animation:dholGroove .48s ease-in-out infinite alternate}
+.second-dhol{animation-delay:.24s}
+@keyframes dholGroove{to{transform:translateY(-4px) rotate(3deg)}}
+.bulbs circle{animation:bulbShine 1.2s ease-in-out infinite alternate}
+.bulbs circle:nth-child(2n){animation-delay:.4s}.bulbs circle:nth-child(3n){animation-delay:.8s}
+@keyframes bulbShine{from{opacity:.45}to{opacity:1;filter:drop-shadow(0 0 4px #ffe4a0)}}
+.sparkles{animation:sparklePulse 2s ease-in-out infinite alternate;transform-origin:center}
+@keyframes sparklePulse{from{opacity:.4}to{opacity:1}}
+.wedding-svg .bride-character{transform-origin:105px 206px;animation:brideSway 2.4s ease-in-out infinite alternate}
+.wedding-svg .groom-character{transform-origin:263px 206px;animation:groomSway 2.4s ease-in-out infinite alternate}
+@keyframes brideSway{from{transform:translateX(-1px) rotate(-1deg)}to{transform:translateX(6px) rotate(1.2deg)}}
+@keyframes groomSway{from{transform:translateX(1px) rotate(1deg)}to{transform:translateX(-6px) rotate(-1.2deg)}}
+.bride-lift-arm{transform-origin:111px 122px;animation:brideGarlandLift 3.6s cubic-bezier(.4,0,.2,1) infinite alternate}
+.groom-lift-arm{transform-origin:286px 120px;animation:groomGarlandLift 3.6s cubic-bezier(.4,0,.2,1) infinite alternate}
+@keyframes brideGarlandLift{0%,12%{transform:rotate(-2deg)}70%,100%{transform:rotate(13deg)}}
+@keyframes groomGarlandLift{0%,12%{transform:rotate(2deg)}70%,100%{transform:rotate(-13deg)}}
+.garland-bridge{transform-origin:180px 105px;animation:garlandExchange 3.6s cubic-bezier(.4,0,.2,1) infinite alternate}
+@keyframes garlandExchange{0%,12%{transform:translateY(12px) scale(.9);opacity:.65}65%,100%{transform:translateY(-2px) scale(1);opacity:1}}
+.mandap-curtain{transform-origin:180px 45px;animation:curtainSway 5s ease-in-out infinite alternate}
+@keyframes curtainSway{to{transform:scaleX(1.025)}}
+.mandap-petals{animation:mandapGlow 2.8s ease-in-out infinite alternate}
+@keyframes mandapGlow{to{filter:brightness(1.25)}}
+.rose-petals{animation:petalFloat 4s ease-in-out infinite alternate}
+@keyframes petalFloat{to{transform:translateY(8px) rotate(12deg)}}
+@media(max-width:430px){.story-scene.premium-scene{height:207px;margin:7px auto 10px}.scene-caption{font-size:21px}}
+@media(prefers-reduced-motion:reduce){.dancer,.raised-arm,.leg-a,.leg-b,.dhol-player,.bulbs circle,.sparkles,.wedding-svg .bride-character,.wedding-svg .groom-character,.bride-lift-arm,.groom-lift-arm,.garland-bridge,.mandap-curtain,.mandap-petals,.rose-petals{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -200,17 +241,45 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}.site-shell
 <div class="arch"></div><span class="floral f1">🌺</span><span class="floral f2">🌿</span><span class="floral f3">🌸</span><span class="floral f4">🪷</span>
 <div class="page-content">
 <div class="kicker reveal">The grand arrival</div>
-<div class="story-scene barat-scene reveal delay1" aria-label="Illustration of the groom dancing at the baraat">
-  <div class="string-lights"></div><span class="scene-flower sf1">✦</span><span class="scene-flower sf2">✿</span><span class="scene-flower sf3">✦</span>
-  <div class="dhol dhol-left"><i></i><b></b></div><div class="dhol dhol-right"><i></i><b></b></div>
-  <div class="dancing-groom">
-    <div class="groom-turban"><span></span></div><div class="groom-head"><i class="groom-eye"></i><i class="groom-moustache"></i></div>
-    <div class="groom-body"><div class="sherwani-buttons">✧<br>✧<br>✧</div><div class="groom-sash"></div></div>
-    <div class="groom-arm arm-left"><span class="hand"></span></div><div class="groom-arm arm-right"><span class="hand"></span></div>
-    <div class="groom-leg leg-left"><span class="shoe"></span></div><div class="groom-leg leg-right"><span class="shoe"></span></div>
-  </div>
-  <div class="scene-ground"></div><span class="confetti c1">✦</span><span class="confetti c2">✧</span><span class="confetti c3">✦</span><span class="confetti c4">✧</span>
-</div>
+<div class="story-scene barat-scene premium-scene reveal delay1" aria-label="Animated groom dancing in a festive baraat">
+<svg class="scene-svg" viewBox="0 0 360 220" role="img" aria-label="Groom in a maroon sherwani and gold turban dancing beneath wedding lights">
+<defs>
+ <linearGradient id="night" x2="0" y2="1"><stop stop-color="#261c37"/><stop offset=".6" stop-color="#71394f"/><stop offset="1" stop-color="#d18c79"/></linearGradient>
+ <linearGradient id="gold" x2="1" y2="1"><stop stop-color="#fff0b9"/><stop offset=".45" stop-color="#d5a34d"/><stop offset="1" stop-color="#93612d"/></linearGradient>
+ <linearGradient id="sherwani" x2="1"><stop stop-color="#54162f"/><stop offset=".5" stop-color="#a82f4b"/><stop offset="1" stop-color="#58172f"/></linearGradient>
+ <linearGradient id="skin"><stop stop-color="#9d5d48"/><stop offset=".55" stop-color="#d99b73"/><stop offset="1" stop-color="#a8664d"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#ffe4a0" stop-opacity=".8"/><stop offset="1" stop-color="#ffe4a0" stop-opacity="0"/></radialGradient>
+ <filter id="softGlow"><feGaussianBlur stdDeviation="4"/></filter>
+</defs>
+<rect width="360" height="220" fill="url(#night)"/>
+<ellipse cx="180" cy="88" rx="116" ry="104" fill="url(#glow)"/>
+<path d="M0 33 Q90 4 180 31 T360 24" fill="none" stroke="#e8c47d" stroke-width="1.5"/>
+<g class="bulbs" fill="#fff0b1"><circle cx="25" cy="29" r="3"/><circle cx="64" cy="23" r="3"/><circle cx="103" cy="24" r="3"/><circle cx="144" cy="29" r="3"/><circle cx="185" cy="29" r="3"/><circle cx="227" cy="26" r="3"/><circle cx="269" cy="22" r="3"/><circle cx="310" cy="24" r="3"/><circle cx="344" cy="30" r="3"/></g>
+<g opacity=".5" stroke="#f1d18a" fill="none"><path d="M20 40 Q45 54 68 40"/><path d="M292 38 Q316 53 340 39"/></g>
+<g class="dhol-player" transform="translate(44 112)"><path d="M-12 42 L-18 71 M9 42 L22 70" stroke="#402437" stroke-width="9" stroke-linecap="round"/><path d="M-22 70 L-7 70 M15 70 L29 70" stroke="#d7a766" stroke-width="7" stroke-linecap="round"/><path d="M-14 0 Q0 -9 14 0 L19 39 Q0 48 -19 39Z" fill="#b47c37" stroke="#f0d59b" stroke-width="2"/><ellipse cy="20" rx="19" ry="15" fill="#e9c88a" stroke="#a56b35" stroke-width="3"/><ellipse cy="20" rx="12" ry="10" fill="#7d3e36"/><path d="M-20 4 L-25 -12 M18 4 L27 -9" stroke="#c98760" stroke-width="6" stroke-linecap="round"/><circle cx="-25" cy="-12" r="4" fill="#d99b73"/><circle cx="27" cy="-9" r="4" fill="#d99b73"/></g>
+<g class="dhol-player second-dhol" transform="translate(316 118) scale(.8)"><path d="M-12 42 L-18 71 M9 42 L22 70" stroke="#402437" stroke-width="9" stroke-linecap="round"/><path d="M-22 70 L-7 70 M15 70 L29 70" stroke="#d7a766" stroke-width="7" stroke-linecap="round"/><path d="M-14 0 Q0 -9 14 0 L19 39 Q0 48 -19 39Z" fill="#b47c37" stroke="#f0d59b" stroke-width="2"/><ellipse cy="20" rx="19" ry="15" fill="#e9c88a" stroke="#a56b35" stroke-width="3"/><ellipse cy="20" rx="12" ry="10" fill="#7d3e36"/><path d="M-20 4 L-25 -12 M18 4 L27 -9" stroke="#c98760" stroke-width="6" stroke-linecap="round"/></g>
+<g class="dancer">
+ <ellipse cx="181" cy="195" rx="54" ry="8" fill="#321b30" opacity=".4"/>
+ <g class="leg leg-a"><path d="M164 151 Q155 171 148 190" stroke="#6d203a" stroke-width="17" stroke-linecap="round" fill="none"/><path d="M148 190 Q137 193 129 188" stroke="#3a2531" stroke-width="9" stroke-linecap="round" fill="none"/><path d="M128 186 l-4 6 20 3" fill="#d6aa61"/></g>
+ <g class="leg leg-b"><path d="M193 151 Q206 172 218 184" stroke="#6d203a" stroke-width="17" stroke-linecap="round" fill="none"/><path d="M218 184 Q227 189 236 182" stroke="#3a2531" stroke-width="9" stroke-linecap="round" fill="none"/><path d="M230 180 l10 2 1 6 -19 2" fill="#d6aa61"/></g>
+ <path d="M152 90 Q180 78 207 91 L218 155 Q182 168 145 155Z" fill="url(#sherwani)" stroke="#e5bd74" stroke-width="1.5"/>
+ <path d="M177 88 L181 157 M187 88 L189 157" stroke="#f4d69a" stroke-width="2"/>
+ <path d="M157 104 L174 111 L164 153 L146 148Z" fill="#d7ad60"/><path d="M158 103 L173 112" stroke="#fff0b6" stroke-width="3"/>
+ <g fill="#f5d894"><circle cx="182" cy="103" r="2.2"/><circle cx="183" cy="116" r="2.2"/><circle cx="185" cy="129" r="2.2"/><circle cx="186" cy="142" r="2.2"/></g>
+ <path d="M153 119 Q132 112 126 93" stroke="url(#skin)" stroke-width="12" stroke-linecap="round" fill="none"/>
+ <g class="raised-arm"><path d="M202 103 Q226 83 220 60" stroke="url(#skin)" stroke-width="12" stroke-linecap="round" fill="none"/><path d="M220 62 Q217 53 225 49 Q232 52 227 61" fill="url(#skin)"/><path d="M210 92 l-8 8 M214 96 l-8 8" stroke="#e2bd77" stroke-width="3"/></g>
+ <circle cx="179" cy="72" r="22" fill="url(#skin)" stroke="#8b4b40" stroke-width="1"/>
+ <path d="M157 68 Q157 43 181 43 Q203 45 201 68 L195 57 Q178 65 162 56Z" fill="#251b27"/>
+ <path d="M157 51 Q179 34 201 51 L207 61 Q181 72 153 60Z" fill="url(#gold)" stroke="#f7df9e" stroke-width="2"/>
+ <path d="M161 51 Q181 42 199 52" fill="none" stroke="#a33149" stroke-width="4"/>
+ <path d="M178 41 L183 31 L189 42" fill="url(#gold)" stroke="#f8df9f" stroke-width="2"/><circle cx="184" cy="32" r="4" fill="#7f2843"/>
+ <path d="M164 72 q5 -3 9 0 M185 72 q5 -3 9 0" stroke="#3b2430" stroke-width="2" fill="none"/><path d="M174 83 Q181 87 188 82" fill="none" stroke="#7b2a3d" stroke-width="2.5" stroke-linecap="round"/>
+ <path d="M168 88 Q180 96 192 88" stroke="#f1d39b" stroke-width="3" fill="none"/>
+ <path d="M158 98 Q181 107 203 98" stroke="#f3d796" stroke-width="3" fill="none"/>
+</g>
+<g class="sparkles" fill="#ffe8aa"><path d="M93 72 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3Z"/><path d="M267 75 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2Z"/><circle cx="112" cy="124" r="2"/><circle cx="249" cy="117" r="2"/><path d="M265 145 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2Z"/></g>
+<path d="M0 203 Q90 195 180 204 T360 201 L360 220 L0 220Z" fill="#4a2839"/><path d="M0 204 Q90 196 180 205 T360 202" fill="none" stroke="#d9b47c" stroke-width="2"/>
+</svg><div class="scene-caption">Dhol beats &amp; dancing feet</div></div>
 <h2 class="event-title reveal delay1">Barat</h2><div class="event-sub reveal delay2">Music · Dancing · Celebration</div>
 <p class="event-copy reveal delay2">Join us as the groom’s procession arrives with music, dancing and hearts full of joy.</p>
 <div class="small-rule reveal delay2"></div>
@@ -243,24 +312,65 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}.site-shell
 <div class="arch"></div><span class="floral f1">🌸</span><span class="floral f2">🌿</span><span class="floral f3">🪷</span><span class="floral f4">🌺</span>
 <div class="page-content">
 <div class="kicker reveal">The promise of forever</div>
-<div class="story-scene varmala-scene reveal delay1" aria-label="Animated illustration of Jyoti and Suraj exchanging wedding garlands">
-  <div class="mandap-glow"></div><div class="mandap-pillar pillar-left"></div><div class="mandap-pillar pillar-right"></div><div class="mandap-canopy"></div>
-  <div class="rose-arch"><span>✿</span><span>❀</span><span>✿</span><span>❀</span><span>✿</span></div>
-  <div class="wedding-couple">
-    <div class="bride-figure">
-      <div class="bride-veil"></div><div class="bride-hair"></div><div class="bride-face"><i></i></div><div class="bride-neck"></div>
-      <div class="bride-dress"><div class="dress-embroidery">✦　✧　✦<br>✧　✦　✧<br>✦　✧　✦</div></div>
-      <div class="bride-arm"><span class="bride-hand"></span></div><div class="bride-bangle"></div>
-    </div>
-    <div class="groom-figure">
-      <div class="safa"></div><div class="groom-wedding-face"><i></i></div><div class="wedding-sherwani"><div>✦<br>✧<br>✦</div></div>
-      <div class="wedding-groom-arm"><span></span></div>
-    </div>
-    <div class="varmala varmala-bride"></div><div class="varmala varmala-groom"></div><div class="garland-flowers">✿　✿　✿</div>
-  </div>
-  <div class="floating-rose fr1">🌹</div><div class="floating-rose fr2">🌸</div><div class="floating-rose fr3">✿</div><div class="scene-ground"></div>
-  <div class="blessing-caption">A promise of forever</div>
-</div>
+<div class="story-scene varmala-scene premium-scene reveal delay1" aria-label="Animated bride and groom exchanging varmala garlands under a flower mandap">
+<svg class="scene-svg wedding-svg" viewBox="0 0 360 230" role="img" aria-label="Bride in a red lehenga and groom in an ivory sherwani exchange flower garlands">
+<defs>
+ <linearGradient id="weddingSky" x2="0" y2="1"><stop stop-color="#2b2038"/><stop offset=".58" stop-color="#8d4c5d"/><stop offset="1" stop-color="#d7a083"/></linearGradient>
+ <linearGradient id="bridalRed" x2="1"><stop stop-color="#781a39"/><stop offset=".5" stop-color="#c33c59"/><stop offset="1" stop-color="#781a39"/></linearGradient>
+ <linearGradient id="ivory" x2="1"><stop stop-color="#d8bd8c"/><stop offset=".48" stop-color="#fff3d8"/><stop offset="1" stop-color="#c5a16c"/></linearGradient>
+ <linearGradient id="jewels" x2="1"><stop stop-color="#fff0b4"/><stop offset=".5" stop-color="#c18a42"/><stop offset="1" stop-color="#fff0b4"/></linearGradient>
+ <linearGradient id="skin2"><stop stop-color="#a6654f"/><stop offset=".55" stop-color="#d99b76"/><stop offset="1" stop-color="#a5644f"/></linearGradient>
+ <radialGradient id="mandapLight"><stop stop-color="#ffe3a5" stop-opacity=".7"/><stop offset="1" stop-color="#ffe3a5" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="360" height="230" fill="url(#weddingSky)"/><ellipse cx="180" cy="120" rx="132" ry="112" fill="url(#mandapLight)"/>
+<path d="M12 44 Q180 -6 348 44" fill="none" stroke="#d7ac66" stroke-width="4"/><path d="M18 47 Q180 2 342 47" fill="none" stroke="#f4d99d" stroke-width="1"/>
+<g fill="#f8d89a"><circle cx="31" cy="41" r="3"/><circle cx="58" cy="33" r="3"/><circle cx="86" cy="28" r="3"/><circle cx="115" cy="24" r="3"/><circle cx="145" cy="22" r="3"/><circle cx="176" cy="21" r="3"/><circle cx="207" cy="23" r="3"/><circle cx="237" cy="27" r="3"/><circle cx="267" cy="33" r="3"/><circle cx="297" cy="38" r="3"/><circle cx="329" cy="44" r="3"/></g>
+<g class="mandap-curtain"><path d="M24 47 Q180 77 336 47 L326 63 Q180 89 34 63Z" fill="#8e2e49" stroke="#e6bd7c" stroke-width="1"/><path d="M35 53 Q180 78 325 53" fill="none" stroke="#f6d99d" stroke-width="3"/></g>
+<g class="mandap-petals" fill="#e7a6a8"><circle cx="34" cy="59" r="5"/><circle cx="47" cy="62" r="5"/><circle cx="61" cy="65" r="5"/><circle cx="75" cy="67" r="5"/><circle cx="89" cy="69" r="5"/><circle cx="103" cy="71" r="5"/><circle cx="117" cy="73" r="5"/><circle cx="131" cy="74" r="5"/><circle cx="145" cy="75" r="5"/><circle cx="159" cy="76" r="5"/><circle cx="173" cy="76" r="5"/><circle cx="187" cy="76" r="5"/><circle cx="201" cy="75" r="5"/><circle cx="215" cy="74" r="5"/><circle cx="229" cy="73" r="5"/><circle cx="243" cy="71" r="5"/><circle cx="257" cy="69" r="5"/><circle cx="271" cy="67" r="5"/><circle cx="285" cy="64" r="5"/><circle cx="299" cy="61" r="5"/><circle cx="313" cy="58" r="5"/></g>
+<path d="M25 49 L25 208 M335 49 L335 208" stroke="url(#jewels)" stroke-width="9"/><path d="M32 50 L32 209 M328 50 L328 209" stroke="#f8e3ae" stroke-width="2"/>
+<g class="bride-character">
+ <path d="M60 104 Q61 68 89 68 Q117 70 119 107 L110 163 L70 163Z" fill="#2b1926"/>
+ <path d="M63 104 Q49 140 52 180 L119 180 Q122 129 111 100Z" fill="url(#bridalRed)" stroke="#f2c779" stroke-width="1.5"/>
+ <path d="M60 111 Q87 123 116 111 L125 211 L43 211Z" fill="url(#bridalRed)" stroke="#f0ca82" stroke-width="2"/>
+ <path d="M50 166 Q85 177 119 166 M46 187 Q84 199 122 187" fill="none" stroke="#e8bd72" stroke-width="2"/>
+ <g fill="#f6d78e"><path d="M57 143 l4 5 -4 5 -4 -5Z"/><path d="M77 151 l4 5 -4 5 -4 -5Z"/><path d="M98 143 l4 5 -4 5 -4 -5Z"/><path d="M63 176 l4 5 -4 5 -4 -5Z"/><path d="M91 180 l4 5 -4 5 -4 -5Z"/><path d="M109 195 l4 5 -4 5 -4 -5Z"/></g>
+ <path d="M66 86 Q89 53 114 86 L111 117 Q88 138 66 117Z" fill="#2a1824"/>
+ <ellipse cx="90" cy="96" rx="21" ry="27" fill="url(#skin2)"/>
+ <path d="M70 91 Q67 68 90 68 Q112 68 111 92 L104 81 Q89 88 73 80Z" fill="#2b1824"/>
+ <path d="M71 79 Q88 65 108 79" fill="none" stroke="#e7bc77" stroke-width="3"/>
+ <path d="M75 98 q5 -3 9 0 M96 98 q5 -3 9 0" stroke="#39212b" stroke-width="2" fill="none"/>
+ <path d="M84 109 Q91 114 98 109" stroke="#8d3345" stroke-width="2" fill="none"/>
+ <path d="M70 78 Q89 68 109 79" stroke="#f5d28a" stroke-width="2" fill="none"/>
+ <path d="M70 82 Q89 70 109 82 L114 112 Q91 128 66 112Z" fill="#7c1b3b" opacity=".25"/>
+ <path d="M72 121 Q59 139 76 151" stroke="url(#skin2)" stroke-width="9" stroke-linecap="round" fill="none"/>
+ <g class="bride-lift-arm"><path d="M107 122 Q128 114 143 91" stroke="url(#skin2)" stroke-width="10" stroke-linecap="round" fill="none"/><circle cx="145" cy="89" r="6" fill="url(#skin2)"/><path d="M112 130 l-7 5 M116 133 l-7 5" stroke="#f5d18a" stroke-width="3"/></g>
+ <path d="M71 121 Q90 132 109 121" stroke="url(#jewels)" stroke-width="3" fill="none"/>
+ <circle cx="69" cy="104" r="4" fill="#f1cc7b"/><circle cx="111" cy="104" r="4" fill="#f1cc7b"/>
+</g>
+<g class="groom-character">
+ <path d="M235 102 Q239 72 263 72 Q287 73 291 105 L285 153 L242 153Z" fill="#2a1b29"/>
+ <path d="M237 108 L289 108 L308 211 L219 211Z" fill="url(#ivory)" stroke="#e9c77f" stroke-width="1.5"/>
+ <path d="M263 108 L263 208 M270 109 L270 207" stroke="#b78a4b" stroke-width="2"/>
+ <g fill="#bd914c"><circle cx="267" cy="129" r="2.5"/><circle cx="267" cy="143" r="2.5"/><circle cx="267" cy="157" r="2.5"/><circle cx="267" cy="171" r="2.5"/><circle cx="267" cy="185" r="2.5"/></g>
+ <ellipse cx="263" cy="96" rx="20" ry="26" fill="url(#skin2)"/>
+ <path d="M242 91 Q240 70 263 68 Q286 70 284 92 L277 82 Q259 89 246 80Z" fill="#2b1926"/>
+ <path d="M239 75 Q263 57 286 76 L287 84 Q262 91 238 84Z" fill="url(#jewels)" stroke="#fff0b6" stroke-width="1.5"/>
+ <path d="M246 74 Q263 66 280 75" stroke="#8c2842" stroke-width="4" fill="none"/>
+ <circle cx="263" cy="66" r="5" fill="#f2d58c" stroke="#a16d38"/>
+ <path d="M248 97 q5 -3 9 0 M269 97 q5 -3 9 0" stroke="#39212b" stroke-width="2" fill="none"/>
+ <path d="M257 108 Q263 111 270 107" stroke="#7e3040" stroke-width="2" fill="none"/>
+ <path d="M239 111 Q263 122 287 111" stroke="#f5d48e" stroke-width="3" fill="none"/>
+ <path d="M239 120 Q221 119 211 99" stroke="url(#skin2)" stroke-width="10" stroke-linecap="round" fill="none"/>
+ <g class="groom-lift-arm"><path d="M286 120 Q266 112 247 90" stroke="url(#skin2)" stroke-width="10" stroke-linecap="round" fill="none"/><circle cx="245" cy="88" r="6" fill="url(#skin2)"/><path d="M279 131 l7 5 M275 134 l7 5" stroke="#f5d18a" stroke-width="3"/></g>
+</g>
+<g class="garland-bridge">
+ <path d="M143 91 Q180 149 246 89" fill="none" stroke="#f4d7a0" stroke-width="12" stroke-linecap="round"/>
+ <path d="M143 91 Q180 149 246 89" fill="none" stroke="#b94057" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 8"/>
+ <g fill="#fff0ce" stroke="#d9ad65" stroke-width="1"><circle cx="150" cy="100" r="5"/><circle cx="160" cy="112" r="5"/><circle cx="171" cy="122" r="5"/><circle cx="183" cy="128" r="5"/><circle cx="195" cy="123" r="5"/><circle cx="207" cy="113" r="5"/><circle cx="220" cy="101" r="5"/><circle cx="233" cy="93" r="5"/></g>
+</g>
+<g class="rose-petals" fill="#ffc7c7"><ellipse cx="34" cy="93" rx="4" ry="7" transform="rotate(-30 34 93)"/><ellipse cx="320" cy="104" rx="4" ry="7" transform="rotate(25 320 104)"/><ellipse cx="174" cy="54" rx="4" ry="7"/><ellipse cx="204" cy="62" rx="4" ry="7" transform="rotate(40 204 62)"/></g>
+<path d="M0 213 Q90 207 180 214 T360 212 L360 230 L0 230Z" fill="#42273b"/><path d="M0 214 Q90 208 180 215 T360 213" fill="none" stroke="#d5ad6c" stroke-width="2"/>
+</svg><div class="scene-caption">The varmala · A promise of forever</div></div>
 <h2 class="event-title reveal delay1">Shaadi</h2><div class="event-sub reveal delay2">Two families · One beautiful beginning</div>
 <p class="event-copy reveal delay2">With the blessings of our loved ones, we begin a new chapter. Your presence will make our most special day even more memorable.</p>
 <div class="small-rule reveal delay2"></div>
