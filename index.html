@@ -92,6 +92,92 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}.site-shell
 @media(max-width:430px){.page{padding-top:48px}.and{margin:10px 0 14px}.arch{height:320px}.floral{font-size:26px}.nav{bottom:15px}}
 @media(prefers-reduced-motion:reduce){.invite:before,.invite:after,.page.active,.pavilion,.sun,.floral,.event-icon,.petal{animation:none!important}}
 
+
+/* Narrative character animation scenes */
+.story-scene{position:relative;width:min(100%,360px);height:220px;flex-shrink:0;overflow:hidden;margin:10px auto 14px;border:1px solid #c99d6d77;border-radius:170px 170px 8px 8px;background:linear-gradient(180deg,#4c233b 0%,#8e4055 47%,#eab68f 100%);box-shadow:inset 0 0 38px #fce6c444,0 14px 35px #6732471b;isolation:isolate}
+.story-scene:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 28%,#ffe7ac88,transparent 45%),linear-gradient(0deg,#4d2b3b44,transparent 45%);z-index:0}
+.string-lights{position:absolute;left:0;right:0;top:18px;height:26px;border-top:1px solid #f5d39c;border-radius:50%;filter:drop-shadow(0 0 5px #ffe3a0);z-index:1}
+.string-lights:before,.string-lights:after{content:"";position:absolute;top:-3px;width:5px;height:8px;border-radius:50%;background:#ffe7a1;box-shadow:48px 9px #ffe7a1,100px 0 #ffe7a1,154px 11px #ffe7a1,210px 1px #ffe7a1,270px 9px #ffe7a1,320px 0 #ffe7a1;animation:twinkle 1.8s ease-in-out infinite alternate}
+.string-lights:after{left:25px;top:8px;animation-delay:.7s}
+@keyframes twinkle{from{opacity:.45;filter:brightness(.8)}to{opacity:1;filter:brightness(1.6)}}
+.scene-ground{position:absolute;bottom:0;left:0;right:0;height:30px;background:linear-gradient(#d7a477,#9b644f);border-top:2px solid #f2d0a0;z-index:1}
+.dancing-groom{position:absolute;z-index:3;left:50%;bottom:23px;width:88px;height:166px;transform:translateX(-50%);animation:groomDance .75s ease-in-out infinite alternate;transform-origin:50% 80%}
+@keyframes groomDance{0%{transform:translateX(-50%) rotate(-5deg) translateY(0)}100%{transform:translateX(-50%) rotate(6deg) translateY(-7px)}}
+.groom-head{position:absolute;top:28px;left:29px;width:34px;height:36px;background:#c9825e;border-radius:48% 48% 44% 44%;z-index:4;border:1px solid #854b42}
+.groom-eye{position:absolute;top:14px;left:21px;width:4px;height:3px;background:#3d2330;border-radius:50%}
+.groom-moustache{position:absolute;top:22px;left:13px;width:12px;height:4px;border-bottom:3px solid #40242c;border-radius:50%}
+.groom-turban{position:absolute;top:17px;left:24px;width:43px;height:17px;border-radius:55% 55% 20% 20%;background:linear-gradient(90deg,#a87a34,#f3d28d,#b17a35);z-index:5;border:1px solid #f8dba0}
+.groom-turban:before{content:"";position:absolute;left:15px;top:-9px;width:12px;height:12px;border-radius:50%;background:#f1d18d;border:2px solid #ad773a}
+.groom-turban span{position:absolute;left:18px;top:2px;width:3px;height:13px;background:#7b263b}
+.groom-body{position:absolute;top:60px;left:21px;width:52px;height:63px;background:linear-gradient(90deg,#6d1d35,#a63c50,#6d1d35);border:1px solid #e6bd7a;border-radius:12px 12px 5px 5px;z-index:3}
+.groom-body:before{content:"";position:absolute;top:0;left:15px;width:20px;height:100%;border-left:1px solid #edcb87;border-right:1px solid #edcb87}
+.sherwani-buttons{position:absolute;top:8px;left:23px;font-size:9px;line-height:13px;color:#f8d99b;z-index:2}
+.groom-sash{position:absolute;top:4px;left:3px;width:12px;height:52px;background:linear-gradient(90deg,#f2d18b,#b9894c);transform:rotate(14deg);border-radius:8px}
+.groom-arm{position:absolute;top:65px;width:15px;height:48px;background:linear-gradient(90deg,#d89b71,#a85d49);border-radius:12px;z-index:2;transform-origin:50% 10%}
+.arm-left{left:9px;transform:rotate(42deg);animation:armUpLeft .75s ease-in-out infinite alternate}
+.arm-right{right:5px;transform:rotate(-58deg);animation:armUpRight .75s ease-in-out infinite alternate}
+@keyframes armUpLeft{to{transform:rotate(5deg) translateY(-10px)}}@keyframes armUpRight{to{transform:rotate(-15deg) translateY(-8px)}}
+.hand{position:absolute;bottom:-5px;left:1px;width:14px;height:13px;border-radius:50%;background:#c9825e}
+.groom-leg{position:absolute;top:117px;width:16px;height:39px;background:#6c2539;border-radius:3px;transform-origin:50% 0}
+.leg-left{left:27px;animation:legKickLeft .75s ease-in-out infinite alternate}.leg-right{left:49px;animation:legKickRight .75s ease-in-out infinite alternate}
+@keyframes legKickLeft{to{transform:rotate(23deg)}}@keyframes legKickRight{to{transform:rotate(-24deg)}}
+.shoe{position:absolute;bottom:-2px;left:-4px;width:24px;height:8px;border-radius:8px;background:#402a32}
+.dhol{position:absolute;top:100px;width:50px;height:29px;border-radius:8px;background:linear-gradient(90deg,#9c5a30,#e8b76b,#9c5a30);border:2px solid #f4d79d;z-index:2;animation:dholBounce .6s ease-in-out infinite alternate}
+.dhol-left{left:16px;transform:rotate(-17deg)}.dhol-right{right:15px;transform:rotate(18deg);animation-delay:.3s}
+.dhol i{position:absolute;left:3px;top:3px;width:15px;height:17px;border-radius:50%;border:1px solid #f9e6bd}.dhol b{position:absolute;right:3px;top:3px;width:15px;height:17px;border-radius:50%;border:1px solid #f9e6bd}
+@keyframes dholBounce{to{translate:0 -5px;rotate:3deg}}
+.scene-flower{position:absolute;color:#f8d99a;z-index:2;animation:starFloat 2.5s ease-in-out infinite}.sf1{left:27%;top:44px}.sf2{right:22%;top:58px;animation-delay:.5s}.sf3{left:20%;top:130px;animation-delay:1s}
+.confetti{position:absolute;z-index:4;color:#ffdfa0;animation:confettiDance 2.8s ease-in-out infinite}.c1{left:19%;top:48px}.c2{left:29%;top:75px;animation-delay:.4s}.c3{right:20%;top:42px;animation-delay:.9s}.c4{right:27%;top:90px;animation-delay:1.3s}
+@keyframes confettiDance{0%,100%{transform:translateY(0) rotate(0);opacity:.35}50%{transform:translateY(-14px) rotate(90deg);opacity:1}}
+.varmala-scene{height:230px;background:linear-gradient(180deg,#351d37 0%,#744056 55%,#d59c85 100%)}
+.mandap-glow{position:absolute;inset:25px 35px 10px;border-radius:50%;background:#ffda9d22;box-shadow:0 0 50px 20px #f8d59b22;animation:mandapBreath 3s ease-in-out infinite}
+@keyframes mandapBreath{50%{opacity:.5;transform:scale(1.06)}}
+.mandap-pillar{position:absolute;top:20px;bottom:22px;width:17px;background:repeating-linear-gradient(0deg,#c58b51 0 7px,#f0d29a 8px 11px);border:1px solid #f5dca4;z-index:1;box-shadow:0 0 12px #f6d9a855}
+.pillar-left{left:18px}.pillar-right{right:18px}
+.mandap-canopy{position:absolute;left:13px;right:13px;top:13px;height:42px;border-radius:50% 50% 6px 6px;background:linear-gradient(#b9814a,#f1d29a 45%,#8c3d51 48%,#6a283e);border:1px solid #f2d49a;z-index:2;box-shadow:0 4px 14px #1c0e2433}
+.rose-arch{position:absolute;left:35px;right:35px;top:34px;height:54px;border-top:7px dotted #f2b4b2;border-radius:50% 50% 0 0;z-index:4;display:flex;justify-content:space-around;color:#ffd6bc;font-size:16px;text-shadow:0 0 6px #ffd1c7}
+.rose-arch span{animation:flowerNod 2s ease-in-out infinite alternate}.rose-arch span:nth-child(even){animation-delay:.7s}
+@keyframes flowerNod{to{transform:translateY(4px) rotate(15deg)}}
+.wedding-couple{position:absolute;left:50%;bottom:23px;width:220px;height:147px;transform:translateX(-50%);z-index:3}
+.bride-figure,.groom-figure{position:absolute;bottom:0;width:94px;height:145px}
+.bride-figure{left:15px;animation:brideApproach 3.2s ease-in-out infinite alternate;transform-origin:80% 100%}
+.groom-figure{right:15px;animation:groomApproach 3.2s ease-in-out infinite alternate;transform-origin:20% 100%}
+@keyframes brideApproach{0%{transform:translateX(-4px) rotate(-1deg)}100%{transform:translateX(9px) rotate(2deg)}}@keyframes groomApproach{0%{transform:translateX(4px) rotate(1deg)}100%{transform:translateX(-9px) rotate(-2deg)}}
+.bride-veil{position:absolute;left:6px;top:16px;width:72px;height:84px;background:linear-gradient(90deg,#7c193b,#bd3855,#781833);clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);border:1px solid #e9b86e}
+.bride-hair{position:absolute;top:17px;left:28px;width:37px;height:37px;border-radius:50%;background:#2b1925;z-index:2}
+.bride-face{position:absolute;top:24px;left:34px;width:27px;height:34px;border-radius:48%;background:#c98267;z-index:3;border:1px solid #e4b084}
+.bride-face:before{content:"";position:absolute;left:4px;top:14px;width:4px;height:2px;background:#45232c;box-shadow:13px 0 #45232c}
+.bride-face:after{content:"";position:absolute;top:20px;left:9px;width:9px;height:5px;border-bottom:1px solid #843a44;border-radius:50%}
+.bride-neck{position:absolute;top:52px;left:43px;width:11px;height:15px;background:#c98267;z-index:2}
+.bride-dress{position:absolute;bottom:0;left:4px;width:82px;height:86px;background:linear-gradient(90deg,#7c193b,#d44861 52%,#851c3d);clip-path:polygon(28% 0,72% 0,100% 100%,0 100%);border-top:2px solid #f2cf86}
+.dress-embroidery{position:absolute;top:18px;left:17px;font-size:9px;line-height:17px;color:#f6d48d;text-align:center}
+.bride-arm{position:absolute;top:63px;left:47px;width:11px;height:49px;background:#c98267;border-radius:8px;transform:rotate(-53deg);transform-origin:top center;z-index:5;animation:brideRaise 3.2s ease-in-out infinite alternate}
+.bride-hand{position:absolute;bottom:-3px;left:-1px;width:13px;height:12px;background:#c98267;border-radius:50%}
+.bride-bangle{position:absolute;top:88px;left:22px;width:17px;height:5px;border:2px solid #f4cf7e;border-radius:5px;transform:rotate(-40deg);z-index:6}
+@keyframes brideRaise{0%{transform:rotate(-35deg)}100%{transform:rotate(-68deg) translateY(-4px)}}
+.safa{position:absolute;top:13px;left:24px;width:45px;height:18px;background:linear-gradient(#f4d38b,#bb8240);border-radius:55% 55% 15% 15%;border:1px solid #f9e4b1;z-index:4}
+.safa:before{content:"";position:absolute;left:19px;top:-8px;width:9px;height:10px;background:#e4bb70;border-radius:50%;border:1px solid #fff0bd}
+.groom-wedding-face{position:absolute;top:26px;left:31px;width:30px;height:34px;background:#c98267;border-radius:48%;z-index:3;border:1px solid #e4b084}
+.groom-wedding-face:before{content:"";position:absolute;top:15px;left:5px;width:4px;height:2px;background:#45232c;box-shadow:14px 0 #45232c}
+.groom-wedding-face:after{content:"";position:absolute;top:22px;left:10px;width:9px;height:4px;border-bottom:2px solid #6b2839;border-radius:50%}
+.wedding-sherwani{position:absolute;bottom:0;left:17px;width:62px;height:89px;background:linear-gradient(90deg,#f4e4c2,#fff6df,#d6b77f);clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);border-top:2px solid #d5a75d}
+.wedding-sherwani div{position:absolute;left:27px;top:14px;color:#ac7940;font-size:9px;line-height:16px}
+.wedding-groom-arm{position:absolute;top:62px;left:21px;width:12px;height:46px;background:#c98267;border-radius:8px;transform:rotate(43deg);transform-origin:top;z-index:5;animation:groomRaise 3.2s ease-in-out infinite alternate}
+.wedding-groom-arm span{position:absolute;bottom:-3px;width:13px;height:12px;border-radius:50%;background:#c98267}
+@keyframes groomRaise{0%{transform:rotate(32deg)}100%{transform:rotate(65deg) translateY(-4px)}}
+.varmala{position:absolute;z-index:7;top:71px;width:36px;height:55px;border:5px dotted #f6d4a0;border-top-color:#f4b1b9;border-radius:50%;filter:drop-shadow(0 0 5px #ffd4bb88);animation:garlandLift 3.2s ease-in-out infinite alternate}
+.varmala-bride{left:81px;transform:rotate(-26deg);animation-name:garlandLiftLeft}
+.varmala-groom{right:80px;transform:rotate(26deg);animation-name:garlandLiftRight}
+@keyframes garlandLiftLeft{0%{transform:translate(-3px,8px) rotate(-24deg)}100%{transform:translate(16px,-16px) rotate(20deg)}}
+@keyframes garlandLiftRight{0%{transform:translate(3px,8px) rotate(24deg)}100%{transform:translate(-16px,-16px) rotate(-20deg)}}
+.garland-flowers{position:absolute;z-index:8;top:96px;left:50%;transform:translateX(-50%);font-size:12px;color:#ffe0b0;text-shadow:0 0 6px #fff0c2;animation:garlandMeet 3.2s ease-in-out infinite alternate}
+@keyframes garlandMeet{0%{opacity:.25;transform:translate(-50%,8px) scale(.8)}100%{opacity:1;transform:translate(-50%,-13px) scale(1.15)}}
+.floating-rose{position:absolute;z-index:7;font-size:17px;animation:roseFloat 4s ease-in-out infinite}.fr1{left:29px;top:103px}.fr2{right:27px;top:90px;animation-delay:1s}.fr3{right:42px;bottom:46px;color:#f4d39b;animation-delay:2s}
+.blessing-caption{position:absolute;z-index:4;bottom:5px;left:0;right:0;font-family:'Italianno',cursive;font-size:24px;color:#fff1d3;text-shadow:0 1px 5px #4a1c32}
+@keyframes roseFloat{50%{transform:translateY(-12px) rotate(12deg)}}
+@media(max-width:430px){.story-scene{height:205px;margin:7px auto 10px}.varmala-scene{height:215px}.dancing-groom{scale:.92}.wedding-couple{scale:.92}}
+@media(prefers-reduced-motion:reduce){.dancing-groom,.groom-arm,.groom-leg,.dhol,.confetti,.scene-flower,.string-lights:before,.string-lights:after,.bride-figure,.groom-figure,.bride-arm,.wedding-groom-arm,.varmala,.garland-flowers,.rose-arch span,.mandap-glow,.floating-rose{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -113,7 +199,18 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}.site-shell
 <section class="page event-page barat" data-page="1" aria-label="Barat ceremony">
 <div class="arch"></div><span class="floral f1">🌺</span><span class="floral f2">🌿</span><span class="floral f3">🌸</span><span class="floral f4">🪷</span>
 <div class="page-content">
-<div class="kicker reveal">The grand arrival</div><div class="event-icon reveal delay1">🐎</div>
+<div class="kicker reveal">The grand arrival</div>
+<div class="story-scene barat-scene reveal delay1" aria-label="Illustration of the groom dancing at the baraat">
+  <div class="string-lights"></div><span class="scene-flower sf1">✦</span><span class="scene-flower sf2">✿</span><span class="scene-flower sf3">✦</span>
+  <div class="dhol dhol-left"><i></i><b></b></div><div class="dhol dhol-right"><i></i><b></b></div>
+  <div class="dancing-groom">
+    <div class="groom-turban"><span></span></div><div class="groom-head"><i class="groom-eye"></i><i class="groom-moustache"></i></div>
+    <div class="groom-body"><div class="sherwani-buttons">✧<br>✧<br>✧</div><div class="groom-sash"></div></div>
+    <div class="groom-arm arm-left"><span class="hand"></span></div><div class="groom-arm arm-right"><span class="hand"></span></div>
+    <div class="groom-leg leg-left"><span class="shoe"></span></div><div class="groom-leg leg-right"><span class="shoe"></span></div>
+  </div>
+  <div class="scene-ground"></div><span class="confetti c1">✦</span><span class="confetti c2">✧</span><span class="confetti c3">✦</span><span class="confetti c4">✧</span>
+</div>
 <h2 class="event-title reveal delay1">Barat</h2><div class="event-sub reveal delay2">Music · Dancing · Celebration</div>
 <p class="event-copy reveal delay2">Join us as the groom’s procession arrives with music, dancing and hearts full of joy.</p>
 <div class="small-rule reveal delay2"></div>
@@ -145,7 +242,25 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}.site-shell
 <section class="page event-page shaadi" data-page="3" aria-label="Wedding ceremony">
 <div class="arch"></div><span class="floral f1">🌸</span><span class="floral f2">🌿</span><span class="floral f3">🪷</span><span class="floral f4">🌺</span>
 <div class="page-content">
-<div class="kicker reveal">The promise of forever</div><div class="event-icon reveal delay1">🪔</div>
+<div class="kicker reveal">The promise of forever</div>
+<div class="story-scene varmala-scene reveal delay1" aria-label="Animated illustration of Jyoti and Suraj exchanging wedding garlands">
+  <div class="mandap-glow"></div><div class="mandap-pillar pillar-left"></div><div class="mandap-pillar pillar-right"></div><div class="mandap-canopy"></div>
+  <div class="rose-arch"><span>✿</span><span>❀</span><span>✿</span><span>❀</span><span>✿</span></div>
+  <div class="wedding-couple">
+    <div class="bride-figure">
+      <div class="bride-veil"></div><div class="bride-hair"></div><div class="bride-face"><i></i></div><div class="bride-neck"></div>
+      <div class="bride-dress"><div class="dress-embroidery">✦　✧　✦<br>✧　✦　✧<br>✦　✧　✦</div></div>
+      <div class="bride-arm"><span class="bride-hand"></span></div><div class="bride-bangle"></div>
+    </div>
+    <div class="groom-figure">
+      <div class="safa"></div><div class="groom-wedding-face"><i></i></div><div class="wedding-sherwani"><div>✦<br>✧<br>✦</div></div>
+      <div class="wedding-groom-arm"><span></span></div>
+    </div>
+    <div class="varmala varmala-bride"></div><div class="varmala varmala-groom"></div><div class="garland-flowers">✿　✿　✿</div>
+  </div>
+  <div class="floating-rose fr1">🌹</div><div class="floating-rose fr2">🌸</div><div class="floating-rose fr3">✿</div><div class="scene-ground"></div>
+  <div class="blessing-caption">A promise of forever</div>
+</div>
 <h2 class="event-title reveal delay1">Shaadi</h2><div class="event-sub reveal delay2">Two families · One beautiful beginning</div>
 <p class="event-copy reveal delay2">With the blessings of our loved ones, we begin a new chapter. Your presence will make our most special day even more memorable.</p>
 <div class="small-rule reveal delay2"></div>
