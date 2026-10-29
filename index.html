@@ -41,6 +41,57 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}.site-shell
 .music-toggle{position:absolute;top:28px;right:29px;z-index:8;border:1px solid #c89b6a;border-radius:50%;width:38px;height:38px;background:#fff6e7c9;color:var(--wine);cursor:pointer;font-size:16px}.music-toggle[aria-pressed="true"]{background:var(--wine);color:#fff}
 @media(max-width:430px){.site-shell{padding:0}.invite{height:100svh;min-height:620px;border:0;border-radius:0}.invite:before{inset:10px}.page{padding:42px 27px 29px}.names{font-size:clamp(70px,18vw,100px)}.event-icon{margin:14px 0 5px}.event-title{font-size:48px}.event-copy{font-size:16px}.details{gap:5px}.detail{padding:6px 7px}.venue-photo{height:105px}.hero-art{height:165px}.closing-art{height:160px}.bottom-note{padding-top:10px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* Premium cinematic refinement */
+:root{--gold-light:#f1d6a0;--gold-deep:#956a36}
+.invite{background:linear-gradient(135deg,#fff9f0 0%,#f9e8d8 36%,#f5d7ce 70%,#fff4e8 100%);box-shadow:0 30px 90px #4b1e2b35,0 0 0 1px #fff8e8 inset}
+.invite:before{inset:15px;border:1px solid #c69a5e;outline:1px solid #c69a5e30;outline-offset:4px;animation:frameGleam 8s ease-in-out infinite}
+.invite:after{inset:0;background:linear-gradient(115deg,transparent 0%,#fff8e82a 35%,transparent 48%),radial-gradient(ellipse at 50% 0%,#fff9edaa,transparent 60%);background-size:220% 100%,100% 100%;animation:lightSweep 12s ease-in-out infinite;z-index:3}
+@keyframes frameGleam{0%,100%{border-color:#c69a5e;opacity:.65}50%{border-color:#e2c38a;opacity:1}}
+@keyframes lightSweep{0%,20%{background-position:180% 0,0 0}65%,100%{background-position:-100% 0,0 0}}
+.page{padding-top:54px;transition:opacity .7s ease,transform 1s cubic-bezier(.18,.78,.18,1),filter .8s ease,visibility .7s}
+.page:not(.active){filter:blur(3px) saturate(.85)}
+.page.active{filter:blur(0) saturate(1);animation:pageArrive .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes pageArrive{0%{clip-path:inset(0 0 0 0);filter:brightness(1.12)}45%{filter:brightness(1.04)}100%{clip-path:inset(0 0 0 0);filter:brightness(1)}}
+.page-content{z-index:2}
+.kicker{font-size:10px;letter-spacing:.32em;color:#9a713f}
+.names{ text-shadow:0 2px 0 #fff8ed,0 8px 24px #812a3b13;letter-spacing:.01em}
+.and{display:block;font-size:36px;margin:14px 0 18px}
+.tagline{letter-spacing:.24em}
+.btn{position:relative;overflow:hidden;border:1px solid #a56a56;background:linear-gradient(115deg,#6f1f32,#9b3549 48%,#6f1f32);box-shadow:0 8px 0 #531b2b15,0 13px 28px #812a3b2b;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,background-position .6s;background-size:200% 100%;background-position:0 0}
+.btn:before{content:"";position:absolute;top:-50%;left:-65%;height:200%;width:36%;transform:rotate(20deg);background:linear-gradient(90deg,transparent,#fff8e8a8,transparent);transition:left .7s ease}
+.btn:hover{transform:translateY(-3px);background-position:100% 0;box-shadow:0 10px 0 #531b2b10,0 18px 32px #812a3b38}
+.btn:hover:before{left:140%}
+.btn span{display:inline-block;transition:transform .3s}.btn:hover span{transform:translateX(4px)}
+.floral{font-size:30px;opacity:.74;filter:sepia(.15) saturate(.8) drop-shadow(0 5px 5px #8a593c25);animation:sway 7s ease-in-out infinite}
+.f1{animation-delay:-1s}.f2{animation-delay:-3.5s}.f3{animation-delay:-2.2s}.f4{animation-delay:-5s}
+.small-rule{background:linear-gradient(90deg,transparent,#b58a52, #e3c48c,#b58a52,transparent)}
+.small-rule:after{background:transparent;text-shadow:0 0 8px #f3d8a6}
+.arch{width:92%;height:365px;border-color:#c9a16a;box-shadow:0 0 40px #fff8e455 inset}
+.arch:before{border-color:#d5b17f}
+.hero-art,.closing-art{isolation:isolate;box-shadow:0 -12px 35px #fff5e433 inset}
+.hero-art:before,.closing-art:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#fff0d655,transparent 40%),linear-gradient(0deg,#543d3c40,transparent 45%);pointer-events:none}
+.hero-art .sun,.closing-art .sun{animation:sunPulse 5s ease-in-out infinite}
+@keyframes sunPulse{0%,100%{transform:scale(.96);box-shadow:0 0 26px 10px #fff1bc66}50%{transform:scale(1.08);box-shadow:0 0 42px 17px #fff1bcaa}}
+.pavilion{filter:drop-shadow(0 8px 8px #6f493322);animation:pavilionGlow 5s ease-in-out infinite}
+@keyframes pavilionGlow{0%,100%{box-shadow:0 0 0 6px #dcb48a44,0 0 20px #f6d8a344}50%{box-shadow:0 0 0 7px #e7c79777,0 0 35px #f6d8a377}}
+.event-icon{filter:drop-shadow(0 5px 6px #a65b3730);animation:floatIcon 4.5s ease-in-out infinite}
+.event-page:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 28%,#fff9e9a8,transparent 56%),linear-gradient(135deg,#ffffff40,transparent 48%);z-index:0;pointer-events:none}
+.event-page .event-title{text-shadow:0 3px 0 #fff7e7a8}
+.detail{border-bottom:1px solid #bd955f38;transition:transform .35s ease,background .35s ease}
+.page.active .detail{animation:detailIn .65s both}
+.page.active .detail:nth-child(2){animation-delay:.12s}.page.active .detail:nth-child(3){animation-delay:.24s}
+@keyframes detailIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.nav{gap:14px;padding:7px 13px;background:#fff8eedb;border-color:#c7a16e;box-shadow:0 6px 24px #5c302014}
+.nav button{transition:background .25s,transform .25s}.nav button:not(:disabled):hover{background:#f1dfca;transform:scale(1.08)}
+.dot{box-shadow:0 0 0 1px #b7834933}.dot.active{box-shadow:0 0 0 3px #812a3b16}
+.music-toggle{box-shadow:0 4px 16px #6a3b2515;backdrop-filter:blur(10px);transition:transform .3s,background .3s,color .3s}.music-toggle:hover{transform:rotate(8deg) scale(1.06)}
+.petal{width:8px;height:13px;filter:drop-shadow(0 2px 2px #8a324322);animation-name:petalDrift}
+@keyframes petalDrift{0%{transform:translate3d(0,-25px,0) rotate(0) scale(.8);opacity:0}12%{opacity:.65}55%{transform:translate3d(-18px,440px,0) rotate(260deg) scale(1)}100%{transform:translate3d(28px,900px,0) rotate(550deg) scale(.85);opacity:0}}
+.thankyou .names{font-size:clamp(68px,14vw,94px)}
+@media(max-width:430px){.page{padding-top:48px}.and{margin:10px 0 14px}.arch{height:320px}.floral{font-size:26px}.nav{bottom:15px}}
+@media(prefers-reduced-motion:reduce){.invite:before,.invite:after,.page.active,.pavilion,.sun,.floral,.event-icon,.petal{animation:none!important}}
+
 </style>
 </head>
 <body>
