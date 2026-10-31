@@ -219,6 +219,33 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}.site-shell
 @media(max-width:430px){.story-scene.premium-scene{height:207px;margin:7px auto 10px}.scene-caption{font-size:21px}}
 @media(prefers-reduced-motion:reduce){.dancer,.raised-arm,.leg-a,.leg-b,.dhol-player,.bulbs circle,.sparkles,.wedding-svg .bride-character,.wedding-svg .groom-character,.bride-lift-arm,.groom-lift-arm,.garland-bridge,.mandap-curtain,.mandap-petals,.rose-petals{animation:none!important}}
 
+
+/* Storybook polish: real couple portrait + livelier illustrated scenes */
+.couple-photo-wrap{position:relative;width:108px;height:108px;margin:9px auto 12px;flex:0 0 auto;filter:drop-shadow(0 8px 14px #6f28352b);animation:portraitFloat 4.8s ease-in-out infinite}
+.couple-photo-wrap:before{content:"";position:absolute;inset:-6px;border:1px solid #bd925c;border-radius:50%;box-shadow:0 0 0 4px #fff4e4a8,0 0 0 5px #bd925c55}
+.couple-photo-wrap:after{content:"✦";position:absolute;right:-10px;top:2px;color:#b78349;font-size:22px;text-shadow:0 2px 5px #fff}
+.couple-photo{display:block;width:100%;height:100%;object-fit:cover;object-position:center 38%;border-radius:50%;border:3px solid #fff7eb}
+@keyframes portraitFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(2deg)}}
+.barat-scene .dancer{transform-box:fill-box;transform-origin:50% 90%;animation:storybookDance .72s ease-in-out infinite alternate}
+.barat-scene .leg-a{transform-box:fill-box;transform-origin:50% 0;animation:storybookKickA .72s ease-in-out infinite alternate}
+.barat-scene .leg-b{transform-box:fill-box;transform-origin:50% 0;animation:storybookKickB .72s ease-in-out infinite alternate}
+.barat-scene .raised-arm{transform-box:fill-box;transform-origin:15% 15%;animation:storybookArms .72s ease-in-out infinite alternate}
+.barat-scene .bulbs{animation:storybookTwinkle 1.4s ease-in-out infinite alternate}
+@keyframes storybookDance{from{translate:0 0;rotate:-4deg}to{translate:0 -5px;rotate:5deg}}
+@keyframes storybookKickA{to{rotate:17deg}}@keyframes storybookKickB{to{rotate:-19deg}}
+@keyframes storybookArms{from{rotate:-5deg}to{rotate:9deg}}
+@keyframes storybookTwinkle{from{opacity:.55}to{opacity:1;filter:drop-shadow(0 0 5px #ffe7a1)}}
+.shaadi .bride-character{transform-box:fill-box;transform-origin:80% 85%;animation:brideLean 2.6s ease-in-out infinite alternate}
+.shaadi .groom-character{transform-box:fill-box;transform-origin:20% 85%;animation:groomLean 2.6s ease-in-out infinite alternate}
+.shaadi .garland-bridge{transform-box:fill-box;transform-origin:50% 0;animation:garlandSway 2.6s ease-in-out infinite alternate}
+.shaadi .bride-lift-arm,.shaadi .groom-lift-arm{transform-box:fill-box;transform-origin:50% 15%;animation:garlandLift 2.6s ease-in-out infinite alternate}
+@keyframes brideLean{to{translate:5px 0;rotate:2deg}}@keyframes groomLean{to{translate:-5px 0;rotate:-2deg}}
+@keyframes garlandSway{from{rotate:-2deg}to{rotate:2deg}}@keyframes garlandLift{from{translate:0 3px}to{translate:0 -5px}}
+.story-scene{box-shadow:inset 0 0 38px #fce6c444,0 16px 38px #67324726}
+.scene-caption{letter-spacing:.08em}
+@media(max-width:430px){.couple-photo-wrap{width:88px;height:88px;margin:5px auto 8px}}
+@media(prefers-reduced-motion:reduce){.couple-photo-wrap,.barat-scene .dancer,.barat-scene .leg-a,.barat-scene .leg-b,.barat-scene .raised-arm,.barat-scene .bulbs,.shaadi .bride-character,.shaadi .groom-character,.shaadi .garland-bridge,.shaadi .bride-lift-arm,.shaadi .groom-lift-arm{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -233,6 +260,7 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}.site-shell
 <h1 class="names reveal delay2">Jyoti <span class="and">and</span> Suraj</h1>
 <div class="small-rule reveal delay2"></div><div class="tagline reveal delay3">Two souls · One journey<br>Forever together</div>
 <p class="intro-copy reveal delay3">A celebration of love, laughter and a beautiful new beginning.</p>
+<div class="couple-photo-wrap reveal delay3"><img class="couple-photo" src="/jyoti-suraj-couple.jpeg" alt="Jyoti and Suraj together"></div>
 <button class="btn reveal delay3" data-go="1">Begin Our Celebration <span>→</span></button>
 <div class="hero-art"><div class="sun"></div><div class="hill back"></div><div class="hill"></div><div class="pavilion"></div></div>
 </div>
