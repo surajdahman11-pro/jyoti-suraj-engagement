@@ -277,6 +277,18 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}.site-shell
 @media(max-width:430px){.wedding-canopy{height:205px}.couple-photo-wrap{width:138px;height:174px;margin:5px auto 7px}.gold-railing{margin-bottom:5px}}
 @media(prefers-reduced-motion:reduce){.canopy-drape,.marigold-row,.hanging-strings span,.ganesh-medallion,.couple-photo-wrap,.gold-railing{animation:none!important;opacity:1;transform:none}}
 
+
+/* Reference-led cinematic scene artwork */
+.reference-scene-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;animation:referenceSceneDrift 16s ease-in-out infinite alternate;filter:saturate(1.08) contrast(1.02)}
+.story-scene .scene-svg{display:none}
+.story-scene .scene-caption{position:absolute;z-index:4;left:0;right:0;bottom:0;padding:23px 10px 9px;background:linear-gradient(transparent,#2a1429d9);color:#fff0d2;text-shadow:0 2px 8px #261322;font-size:19px}
+.barat-scene:after,.varmala-scene:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,#28152a22,transparent 45%,#28152a45);box-shadow:inset 0 0 0 5px #f8e3b344}
+@keyframes referenceSceneDrift{from{transform:scale(1)}to{transform:scale(1.12)}}
+.illustrated-couple-wrap{width:min(100%,260px);height:138px;margin:7px auto 10px;overflow:hidden;border:3px solid #fff3df;outline:1px solid #c99a63;box-shadow:0 10px 26px #63334225;position:relative}
+.illustrated-couple-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;animation:referenceSceneDrift 18s ease-in-out infinite alternate}
+.illustrated-couple-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9b7046;margin-top:4px}
+@media(prefers-reduced-motion:reduce){.reference-scene-art,.illustrated-couple-wrap img{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -306,7 +318,7 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}.site-shell
 <div class="arch"></div><span class="floral f1">🌺</span><span class="floral f2">🌿</span><span class="floral f3">🌸</span><span class="floral f4">🪷</span>
 <div class="page-content">
 <div class="kicker reveal">The grand arrival</div>
-<div class="story-scene barat-scene premium-scene reveal delay1" aria-label="Animated groom dancing in a festive baraat">
+<div class="story-scene barat-scene premium-scene reveal delay1" aria-label="Festive illustrated baraat procession"><img class="reference-scene-art" src="https://images.openai.com/static-rsc-4/qHgWFQUgg_2xrqia9W8UvmSvuwxm8DZS_piF-HuLfnvCGlQ-aIleYFMANNVPpFNYnGiuPd-X_aws5wi5fxwhC5xvkDsspt6cBLbftemVjaBgECIyGtR8BEzB2dXzUsiRzphwJ4d1vVN43oVa3lF8u8K1ZQ008bYlMi1s6stXdP0?purpose=inline" alt="Illustrated groom arriving in a decorated baraat with wedding lights and dhol players">
 <svg class="scene-svg" viewBox="0 0 360 220" role="img" aria-label="Groom in a maroon sherwani and gold turban dancing beneath wedding lights">
 <defs>
  <linearGradient id="night" x2="0" y2="1"><stop stop-color="#261c37"/><stop offset=".6" stop-color="#71394f"/><stop offset="1" stop-color="#d18c79"/></linearGradient>
@@ -377,7 +389,7 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}.site-shell
 <div class="arch"></div><span class="floral f1">🌸</span><span class="floral f2">🌿</span><span class="floral f3">🪷</span><span class="floral f4">🌺</span>
 <div class="page-content">
 <div class="kicker reveal">The promise of forever</div>
-<div class="story-scene varmala-scene premium-scene reveal delay1" aria-label="Animated bride and groom exchanging varmala garlands under a flower mandap">
+<div class="story-scene varmala-scene premium-scene reveal delay1" aria-label="Bride and groom exchanging varmala beneath a floral canopy"><img class="reference-scene-art" src="https://images.openai.com/static-rsc-4/Uc2WeSldDRMXvcIFB3zrQjLh9NprJH3RpLYqyCuHpzXJUU--byegRdTaOcuj2tROT_QE7OsTc6MvyW0m7ysApIOnMRPdAQI-VeYY2GL2p8X_4FCW9zudbn4oUp1Ed-izEG_3UgsK_5x6wTjLhPocIymH7hRaYrikVi4N-Ep5884?purpose=inline" alt="Illustrated bride and groom exchanging wedding garlands">
 <svg class="scene-svg wedding-svg" viewBox="0 0 360 230" role="img" aria-label="Bride in a red lehenga and groom in an ivory sherwani exchange flower garlands">
 <defs>
  <linearGradient id="weddingSky" x2="0" y2="1"><stop stop-color="#2b2038"/><stop offset=".58" stop-color="#8d4c5d"/><stop offset="1" stop-color="#d7a083"/></linearGradient>
