@@ -289,6 +289,17 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}.site-shell
 .illustrated-couple-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9b7046;margin-top:4px}
 @media(prefers-reduced-motion:reduce){.reference-scene-art,.illustrated-couple-wrap img{animation:none!important}}
 
+
+/* Wedding schedule preview on the opening page */
+.welcome-schedule{width:min(100%,390px);margin:9px auto 8px;padding:9px 11px 8px;border-top:1px solid #bd925c88;border-bottom:1px solid #bd925c88;background:linear-gradient(90deg,transparent,#fff8edaa,transparent);position:relative;z-index:2}
+.welcome-schedule .schedule-heading{font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#9a713f;margin-bottom:6px}
+.welcome-schedule .schedule-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+.welcome-schedule .schedule-item{font-size:11px;line-height:1.25;color:#68483c}
+.welcome-schedule .schedule-item strong{display:block;font-size:13px;color:#812a3b;font-weight:600}
+.welcome-schedule .schedule-item span{display:block;font-size:10px;margin-top:2px}
+.welcome-schedule .schedule-venue{font-size:10px;letter-spacing:.05em;margin-top:6px;color:#8c6448}
+@media(max-width:430px){.welcome-schedule{margin:5px auto;padding:7px 8px}.welcome-schedule .schedule-item strong{font-size:12px}}
+
 </style>
 </head>
 <body>
@@ -307,7 +318,7 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}.site-shell
 <div class="ganesh reveal">ॐ श्री गणेशाय नमः</div><div class="kicker reveal delay1">With the blessings of our families</div>
 <p class="intro-copy reveal delay1">We joyfully invite you to celebrate the wedding of</p>
 <h1 class="names reveal delay2">Jyoti <span class="and">and</span> Suraj</h1>
-<div class="small-rule reveal delay2"></div><div class="tagline reveal delay3">Two souls · One journey<br>Forever together</div>
+<div class="small-rule reveal delay2"></div><div class="tagline reveal delay3">Two souls · One journey<br>Forever together</div><div class="welcome-schedule reveal delay3"><div class="schedule-heading">Save the dates</div><div class="schedule-grid"><div class="schedule-item"><strong>12 Feb 2027</strong>Haldi<span>10:00 AM</span></div><div class="schedule-item"><strong>13 Feb 2027</strong>Baraat<span>Time to be confirmed</span></div><div class="schedule-item"><strong>13 Feb 2027</strong>Wedding<span>7:00 PM</span></div></div><div class="schedule-venue">Akhyana · Sector 52 · Gurugram</div></div>
 <p class="intro-copy reveal delay3">A celebration of love, laughter and a beautiful new beginning.</p>
 <div class="couple-photo-wrap reveal delay3"><img class="couple-photo" src="/jyoti-suraj-couple.jpeg" alt="Jyoti and Suraj together"></div><div class="gold-railing reveal delay3" aria-hidden="true"><span>✥　✧　✥　✧　✥　✧　✥</span></div>
 <button class="btn reveal delay3" data-go="1">Begin Our Celebration <span>→</span></button>
